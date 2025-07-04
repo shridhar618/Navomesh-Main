@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Events - Registration</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+  font-family: "Poppins",sans-serif;
+}
+body 
+{
+  margin:0;
+  padding:0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Pics/Robot\ ai.png);
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:50%;
+  min-height: 50%;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow:hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  bottom:0;
+}
+body, html 
+{
+  overflow-x: hidden;
+}
+nav
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+}
+nav ul
+{
+  width: 95%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a
+{
+  padding: 15px 25px;
+  margin-right:5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  font-weight: bolder;
+}
+nav a:hover
+{
+  color:rgba(237, 250, 54, 0.975);
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+.drop2
+{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  float: left;
+  overflow: hidden;
+  margin-top: -10;
+}
+.drop2 .dropbtn2
+{
+  padding: 15px 25px;
+  margin-right:5px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  font-weight: bolder;
+}
+
+.drop2-content a:hover {
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content 
+{
+  display: none;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  width: 230px;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.drop2:hover .dropdown-content 
+{
+  display: block;
+}
+/* Show the dropdown button with a background color when hovered */
+.dropdown:hover .dropbtn 
+{
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar
+{
+  position: fixed;
+  top:-18px; 
+  right: 0;
+  height:max-content;
+  width: 250px;
+  padding:10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  padding-left: 0px;
+  z-index: 999;
+}
+.sidebar li{
+  width: 100%;
+  display:flex;
+}
+.sidebar a{
+  width: 100%;
+  text-align: left;
+  font-size: 15px;  
+}
+.sidebar li a
+{
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: flex-start ;
+}
+.menu-button
+{
+  display: none;
+}
+
+@media(max-width: 900px){
+  .hideOnMobile{
+    display: none;
+  }
+  .drop2
+  {
+    display: none ;
+  }
+  .menu-button
+  {
+    display: block;
+  }
+
+}
+@media(max-width: 425px)
+{
+  .sidebar{
+    width: 50%;
+    height:max-content;
+  }
+}
+
+.container 
+{
+   display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    padding-top:50px;
+}
+.logo
+  {
+    height:60px;
+    width:90px;
+    margin-top:-10px;
+  }
+h1 
+{
+    animation:zoom-in 1.7s ease ;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 750;                
+    color: rgb(255, 0, 255);
+    -webkit-text-stroke: 1px rgb(255, 255, 255); 
+}
+@keyframes zoom-in 
+{
+  0% {
+    transform: scale(1.1, 1.1);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.event1, .event2, .event3, .event4 
+{
+    position:relative;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    border: 1px solid #f3eeee;
+    background: rgba(57, 1, 1, 0.37);
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    width:500px;
+    height: max-content; /* Default height */
+    transition: height 0.7s ease; /* Smooth transition */
+    padding: 40px;
+}
+.event1.expanded, .event2.expanded, .event3.expanded, .event4.expanded {
+    height: max-content; /* Height when expanded */
+}
+.event1 h2, .event2 h2, .event3 h2, .event4 h2 {
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(71, 243, 243);
+}
+.event1 p, .event2 p, .event3 p, .event4 p {
+    padding: 25px;
+    line-height: 1.6;
+    color: white;
+}
+.register-btn 
+{
+    display: flex;
+    background-color: #23b928;
+    color: white;
+    font-weight: bold;
+    margin-left:5px;
+    font-size: 15px;
+    font-weight: 200;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    width: 80px;
+    justify-content: center;
+
+}
+.register-btn:hover {
+    background-color: #147919;
+}
+.form-container 
+{
+    display: none;
+    margin-top: 20px;
+}
+form 
+{
+    display: flex;
+    flex-direction: column;
+}
+.form-container label 
+{
+    font-size: 15px;
+    color: rgb(255, 249, 190);
+}
+label, input 
+{
+    margin-left: 25px;
+    margin-bottom: 10px;
+    width: 250px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background: transparent;
+    height:12px;
+}
+input[type="text"] 
+{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button[type="submit"] 
+{
+    margin-bottom: 20px;
+    margin-left: 25px;
+    background-color: #08abe1;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+}
+button[type="submit"]:hover 
+{
+    background-color: #007bb5;
+}
+.close-btn
+{
+    position: relative;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-right:30px; 
+    align-self: flex-end; 
+}
+footer
+{
+  width:100vw;
+  margin-top: auto;
+  background-color: black;
+  height:60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top:50px;
+}
+footer h2
+{
+  font-family: sans-serif;
+  font-size:13px;
+  color:grey;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+.soicons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  padding-right: 55px;
+ }
+
+.soicons .button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  transition: 0.1s;
+}
+.soicons .button svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+  z-index: 9;
+}
+
+.soicons .button:nth-child(2) {
+  background: linear-gradient(120deg, #02ff2c, #008a12);
+}
+
+.soicons .button:nth-child(1) {
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.soicons .button:nth-child(3) {
+  background: rgb(255, 33, 33);
+}
+.soicons .button:active {
+  transform: scale(0.85);
+}
+
+.soicons .button::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: #212121;
+  border-radius: 50px;
+  z-index: -1;
+  border: 0px solid rgba(255, 255, 255, 0.411);
+  transition: 0.4s;
+}
+.soicons .button:hover::before {
+  width: 0px;
+  height: 0px;
+}
+input:is(:focus)
+{
+  all:unset;
+  padding: 8px;
+  width:300px;
+  color:white;
+  border-radius: 5px;
+  border:2px solid transparent;
+  transition: all 0.1s ease;
+  background: transparent;
+  background:linear-gradient(black,black)padding-box, linear-gradient(45deg,blue,red)border-box;
+}
+.eventname p
+{
+  font-size: 20px;
+  color:white;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+@media only screen and (max-width:500px) 
+{
+body 
+{
+  margin:0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+.container
+{
+display: flex;
+flex-direction: column; /* Stack events vertically */
+padding: 10px 15px;
+width:100%;
+}
+h1 {
+font-size: 30px; /* Adjust heading size for mobile */
+padding-top: 40px; /* Adjust top margin for the heading */
+}
+.logo
+{
+  height:60px;
+  width:90px;
+  top:0;
+  margin-left:-35px;
+}
+.event1, .event2, .event3, .event4 {
+width: 100%;
+height: max-content;
+padding-bottom: 15px; 
+padding-left:0px;
+padding:10px;
+margin-top: 15px;
+margin-right:20px;
+} 
+.event1 p, .event2 p, .event3 p, .event4 p {
+  padding: 25px;
+  line-height: 1.6;
+  color: white;
+}
+.register-btn {
+margin-left: 50px; /* Center the button */
+font-size: 14px; /* Adjust button font size */
+padding: 8px 16px; /* Adjust padding for the button */
+}
+
+.form-container {
+width: 100%; 
+margin-top: 10px; 
+}
+
+label, input {
+width: 80%; /* Make inputs take full width */
+margin-left: 0; /* Remove left margin */
+padding: 8px; /* Add padding for better touch */
+}
+
+input[type="text"] {
+padding: 10px; /* Increase padding for touch targets */
+}
+
+button[type="submit"] {
+width: 40%; /* Make submit button take full width */
+margin-left: 0; /* Remove left margin */
+}
+
+.close-btn {
+font-size: 24px; /* Adjust size for mobile */
+margin-right: 0; /* Align close button properly */
+right: 10px; /* Position close button at the top right */
+margin-top: 100%;
+}
+h1 
+{
+    animation:zoom-in 1.7s ease ;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 750;                 
+    color: rgb(255, 0, 255);
+    -webkit-text-stroke:1px rgb(255, 255, 255); 
+}
+
+.event1 p, .event2 p, .event3 p, .event4 p {
+    padding: 2px;
+    line-height: 1.6;
+    color: white;
+}
+footer
+{
+  bottom: 0;
+  width:100%;
+  margin-top: auto;
+  background-color: black;
+  height:60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer h2
+{
+  font-family: sans-serif;
+  font-size:6px;
+  color:grey;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+.soicons{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 5px;
+}
+
+.soicons .button 
+{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+}
+.soicons .button svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+  z-index: 9;
+}
+.soicons .button::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #212121;
+  border-radius: 50px;
+  z-index: -1;
+  border: 0px solid rgba(255, 255, 255, 0.411);
+  transition: 0.4s;
+}
+.soicons .button:hover::before {
+  width: 0px;
+  height: 0px;
+}
+
+.eventname p
+{
+  font-size: 15px;
+  color:white;
+  font-weight: 400;
+  text-align: center;
+}
+}
+
+
+
+
+@media screen and (max-width: 848px) 
+{
+  body 
+{
+  margin:0;
+  padding: 0; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container
+{
+display: flex;
+flex-direction: column; 
+padding: 10px 15px;
+width:80%;
+padding:10px 0px;
+}
+
+h1 {
+font-size: 20px; /* Adjust heading size for mobile */
+padding-top: 40px; /* Adjust top margin for the heading */
+}
+.logo
+{
+  height:60px;
+  width:90px;
+  top:0;
+  margin-left:-35px;
+}
+.event1, .event2, .event3, .event4 {
+width: 100%;
+height: max-content;
+padding-bottom: 15px; /* Space between events */
+padding-left:0px;
+padding:10px;
+margin-top: 15px;
+}
+.event1 p, .event2 p, .event3 p, .event4 p {
+  padding: 25px;
+  line-height: 1.6;
+  color: white;
+}
+.register-btn {
+margin-left: 50px; /* Center the button */
+font-size: 14px; /* Adjust button font size */
+padding: 8px 16px; /* Adjust padding for the button */
+}
+
+.form-container {
+width: 100%; 
+margin-top: 10px; 
+}
+
+label, input {
+width: 80%; /* Make inputs take full width */
+margin-left: 0; /* Remove left margin */
+padding: 8px; /* Add padding for better touch */
+}
+
+input[type="text"] {
+padding: 10px; /* Increase padding for touch targets */
+}
+
+button[type="submit"] {
+width: 40%; /* Make submit button take full width */
+margin-left: 0; /* Remove left margin */
+}
+
+.close-btn {
+font-size: 24px; /* Adjust size for mobile */
+margin-right: 0; /* Align close button properly */
+right: 10px; /* Position close button at the top right */
+margin-top: auto; /* Adjust vertical position */
+}
+h1 
+{
+    animation:zoom-in 1.7s ease ;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 750;                 
+    color: rgb(255, 0, 255);
+    -webkit-text-stroke:1px rgb(255, 255, 255); 
+}
+@keyframes zoom-in 
+{
+  0% {
+    transform: scale(1.3, 1.3);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.event1 p, .event2 p, .event3 p, .event4 p {
+    padding: 2px;
+    line-height: 1.6;
+    color: white;
+}
+footer
+{
+  bottom: 0;
+  width:100%;
+  margin-top:auto;
+  background-color: black;
+  height:60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer h2
+{
+  font-family: sans-serif;
+  font-size:6px;
+  color:grey;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+.soicons{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 5px;
+}
+
+.soicons .button 
+{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+}
+.soicons .button svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+  z-index: 9;
+}
+.soicons .button::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #212121;
+  border-radius: 50px;
+  z-index: -1;
+  border: 0px solid rgba(255, 255, 255, 0.411);
+  transition: 0.4s;
+}
+.soicons .button:hover::before {
+  width: 0px;
+  height: 0px;
+}
+}
+
+  </style>
+    <script>
+        function showForm(id, eventClass) {
+            const formContainer = document.getElementById(id);
+            const eventElement = document.querySelector(`.${eventClass}`);
+
+            // Toggle form visibility
+            if (formContainer.style.display === 'block') 
+            {
+                formContainer.style.display = 'none';
+                eventElement.classList.remove('expanded'); // Collapse the event
+            } 
+            else 
+            {
+                formContainer.style.display = 'block';
+                eventElement.classList.add('expanded'); // Expand the event
+            }
+        }
+        function hideForm(formId, eventClass) 
+        {
+            document.getElementById(formId).style.display = 'none';
+            document.querySelector(`.${eventClass}`).classList.remove('expanded');
+        }
+        function showSidebar()
+        {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar()
+        {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+        function showMessageBox() 
+        {
+            alert("Submitted Successfully!");
+            return true; 
+        }
+        function showForm(id) {
+            const form = document.getElementById(id);
+            // Toggle the display of the form
+            if (form.style.display === 'block') {
+                form.style.display = 'none';
+            } else {
+                // Hide all other forms
+                const forms = document.querySelectorAll('.form-container');
+                forms.forEach(f => f.style.display = 'none');
+                // Show the selected registration form
+                form.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+        <nav>
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="commerce.html">Commerce Events</a></li>
+              <li><a href="cultural.html">Cultural Events</a></li>
+              <li><a href="it_page.html">IT Events</a></li>
+              <li><a href="Pics/Navonmesha Brochure 2024.pdf" download="Brochure">Brochure</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="devs.html">Devs</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+            <ul class="fullnav">
+              <li><a href="index.html"><img src="Pics/Logo_.png" class="logo"></a></li>
+              <li class="hideOnMobile"><a href="index.html">Home</a></li>
+              <div class="drop2">
+                <li class="dropbtn2">Events</li>
+                  <i class="fa fa-caret-down"></i>
+                </li>
+                <div class="dropdown-content">
+                  <li class="hideOnMobile"><a href="commerce.html">Commerce Events</a></li>
+                  <li class="hideOnMobile"><a href="cultural.html">Cultural Events</a></li>
+                  <li class="hideOnMobile"><a href="it_page.html">IT Events</a></li>
+                </div>
+              </div>
+              <li class="hideOnMobile"><a href="Pics/Navonmesha Brochure 2024.pdf" download="Brochure">Brochure</a></li>
+              <li class="hideOnMobile"><a href="about.html">About us</a></li>
+              <li class="hideOnMobile"><a href="devs.html">Devs</a></li>
+              <li class="hideOnMobile"><a href="#">Login</a></li>
+              <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 96 960 960" width="40" fill="white"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            </ul>
+          </nav>
+      <div class="eventname">
+      <h1 class="ZoomIn">IT Events - Registration</h1>
+      <p>Registration fees per participant is Rs. 50.</p>
+    </div>
+    <div class="container">
+        <!-- Star Quest (Quiz) -->
+        <div class="event1">
+            <h2>Star Quest (IT QUIZ)</h2>
+            <p>1. Only one team(2 participants) is allowed from each college.<br>
+            2. There will be multiple rounds including sub-rounds.<br>
+            3. Questions will focus on IT-related topics.<br>
+            4. No electronic gadgets are allowed.</p>
+            <button class="register-btn" onclick="showForm('quizForm', 'event1')">Register</button>
+            <div id="quizForm" class="form-container">
+                <form method="POST" action="/register_quiz">
+                    <label>Participant 1 Name:</label><input type="text" name="participant1_name" required>
+                    <label>Participant 1 Phone:</label><input type="text" name="participant1_phone" required>
+                    <label>Participant 1 Branch:</label><input type="text" name="participant1_branch" required>
+                    <label>Participant 2 Name:</label><input type="text" name="participant2_name" required>
+                    <label>Participant 2 Phone:</label><input type="text" name="participant2_phone" required>
+                    <label>Participant 2 Branch:</label><input type="text" name="participant2_branch" required>
+                    <button class="close-btn" onclick="hideForm('quizForm', 'event1')">X</button>
+                    <button type="submit" onsubmit="return showMessageBox()">Submit</button> 
+                </form>
+            </div>
+        </div>
+        <!-- Fornax Code (Error Debugging) -->
+        <div class="event2">
+            <h2>Fornax Code (Error Debugging)</h2>
+            <p>1. Only one team(2 participants) is allowed from each college.<br>
+            2. Basic coding skills are the only requirements for the participants.<br>
+            3. Participants can choose between Python and C++ programming language.<br>
+            4. Engaging in any form of unfair practices or cheating will result in disqualification.<br>
+            5. During the event, participants are not permitted to use smart watches, mobiles or any gadgets.</p>
+            <button class="register-btn" onclick="showForm('fornaxForm', 'event2')">Register</button>
+
+            <div id="fornaxForm" class="form-container">
+                <form method="POST" action="/register_fornax">
+                    <label>Name:</label><input type="text" name="name" required>
+                    <label>Phone:</label><input type="text" name="phone" required>
+                    <label>Branch:</label><input type="text" name="branch" required>
+                    <button class="close-btn" onclick="hideForm('fornaxForm', 'event2')">X</button>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    <div class="container">
+      <!-- Orion's Eye (Videography) -->
+      <div class="event4">
+        <h2>Orion's Eye (Videography)</h2>
+        <p>1.It is an individual event, Participants are allowed to use any equipment’s and editing software.<br>
+            2. No damaging college properties. Participants will have to reimburse the loss along with a fine amount for the act.<br>
+            3. Topics will be given on the spot, Photos and videos should be taken within the college campus.</p>
+    
+        <button class="register-btn" onclick="showForm('orionForm', 'event4')">Register</button>
+  
+        <div id="orionForm" class="form-container">
+            <form method="POST" action="/register_orion">
+                <label>Name:</label><input type="text" name="name" required>
+                <label>Phone:</label><input type="text" name="phone" required>
+                <label>Branch:</label><input type="text" name="branch" required>
+                <button class="close-btn" onclick="hideForm('orionForm', 'event4')">X</button>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>  
+      <!-- Pictoris (Collage) -->
+      <div class="event3">
+        <h2>Pictoris (Collage)</h2>
+        <p>1. Only one team(2 participants) is allowed from each college.<br>
+            2. The collage should be on the theme of 'First Indian Super Computer'.<br>
+            3. A3 sheet will be provided.<br>
+            4. Own newspaper, glue, sketch pens and scissors must be brought.</p>
+        <button class="register-btn" onclick="showForm('pictorisForm', 'event3')">Register</button>
+
+        <div id="pictorisForm" class="form-container">
+            <form method="POST" action="/register_pictoris">
+                <label>Participant 1 Name:</label><input type="text" name="participant1_name" required>
+                <label>Participant 1 Phone:</label><input type="text" name="participant1_phone" required>
+                <label>Participant 1 Branch:</label><input type="text" name="participant1_branch" required>
+
+                <label>Participant 2 Name:</label><input type="text" name="participant2_name" required>
+                <label>Participant 2 Phone:</label><input type="text" name="participant2_phone" required>
+                <label>Participant 2 Branch:</label><input type="text" name="participant2_branch" required>
+                <button class="close-btn" onclick="hideForm('pictorisForm', 'event3')">X</button>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>    
+<footer>
+<h2> &copy; Navonmesh 2024. All rights reserved</h2>
+<div class="soicons">
+<button onclick="window.location.href='https://www.instagram.com/imjkundapura/?utm_source=ig_web_button_share_sheet';" class="button">
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    height="24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    class="w-6 h-6 text-gray-800 dark:text-white"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+      fill-rule="evenodd"
+      fill="currentColor"
+    ></path>
+  </svg>
+</button>
+<button onclick="window.location.href='https://wa.me/9380773435';" class="button">
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    height="24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    class="w-6 h-6 text-gray-800 dark:text-white"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+      fill-rule="evenodd"
+      fill="currentColor"
+    ></path>
+    <path
+      d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"
+      fill="currentColor"
+    ></path>
+  </svg>
+</button>
+<button onclick="window.location.href='https://www.youtube.com/@IMJISC';" class="button" >
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    height="24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    class="w-6 h-6 text-gray-800 dark:text-white"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z"
+      fill-rule="evenodd"
+    ></path>
+  </svg>
+</button>
+</div>
+</footer>
+</body>
+</html>
